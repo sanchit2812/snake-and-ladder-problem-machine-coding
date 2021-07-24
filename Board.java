@@ -4,10 +4,11 @@ class Board {
     private Ladder ladderList[];
     private HashMap<int, int> snakesAndLadderList = new HashMap<int, int>();
 
-    Board(Integer boardSize, Snake snakesList[], Ladder ladderList[]){
+    public Board(Integer boardSize, Snake snakesList[], Ladder ladderList[]){
         this.boardSize = boardSize;
         this.snakesList = snakesList;
         this.ladderList = ladderList;
+
     }
     
     for(int i=0;i<snakesList.size();i++){
