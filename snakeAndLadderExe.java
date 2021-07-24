@@ -39,6 +39,7 @@ public class snakeAndLadderExe {
         
         String winner;
         HashMap<Integer, Integer> snakesAndLadderList = board.getSnakesAndLadderList();
+        
         while(1){
             for(int i=0;i<numberOfPlayers;i++){
                 int diceValue = (int)(Math.random()*(6)+1);  

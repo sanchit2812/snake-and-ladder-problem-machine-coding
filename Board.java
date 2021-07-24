@@ -2,13 +2,14 @@ class Board {
     private int boardSize;
     private Snake snakesList[];
     private Ladder ladderList[];
-    private HashMap<int, int> snakesAndLadderList = new HashMap<int, int>();
+    private HashMap<Integer, Integer> snakesAndLadderList;
+
 
     public Board(Integer boardSize, Snake snakesList[], Ladder ladderList[]){
         this.boardSize = boardSize;
         this.snakesList = snakesList;
         this.ladderList = ladderList;
-
+        this.snakesAndLadderList = new HashMap<Integer, Integer>();
     }
     
     for(int i=0;i<snakesList.size();i++){
@@ -23,7 +24,7 @@ class Board {
         snakesAndLadderList.put(startingPoint, endingPoint);
     }
 
-    public HashMap<int, int> getSnakesAndLadderList(){
+    public HashMap<Integer, Integer> getSnakesAndLadderList(){
         return this.snakesAndLadderList;
     }
 
