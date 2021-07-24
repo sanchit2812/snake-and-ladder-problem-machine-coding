@@ -1,0 +1,49 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch snakeAndLadderExe",
+            "request": "launch",
+            "mainClass": "snakeAndLadderExe",
+            "projectName": "snake-and-ladder-problem-machine-coding_146a37b2"
+        },
+        {
+            "type": "java",
+            "name": "Launch driver",
+            "request": "launch",
+            "mainClass": "driver",
+            "projectName": "snake-and-ladder-problem-machine-coding_146a37b2"
+        },
+        {
+            "type": "java",
+            "name": "Launch B",
+            "request": "launch",
+            "mainClass": "B",
+            "projectName": "snake-and-ladder-problem-machine-coding_146a37b2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch QuickStart",
+            "request": "launch",
+            "mainClass": "QuickStart",
+            "projectName": "snake-and-ladder-problem-machine-coding_146a37b2"
+        },
+        {
+            "type": "java",
+            "name": "Launch abc",
+            "request": "launch",
+            "mainClass": "abc",
+            "projectName": "snake-and-ladder-problem-machine-coding_146a37b2"
+        }
+    ]
+}
