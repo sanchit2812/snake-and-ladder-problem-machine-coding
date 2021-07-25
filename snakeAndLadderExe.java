@@ -1,6 +1,10 @@
 import java.util.*;
 import java.lang.*;
 import java.io.*;
+import Board.java;
+import Ladder.java;
+import Snake.java;
+import Player.java;
 
 public class snakeAndLadderExe {
     public static void main(String[] args) {
@@ -36,11 +40,13 @@ public class snakeAndLadderExe {
         }
         
         Board board = new Board(100, snakesList,laddersList);
+        board.snakeSetupAtBoard();
+        board.ladderSetupAtBoard();
         
-        String winner;
         HashMap<Integer, Integer> snakesAndLadderList = board.getSnakesAndLadderList();
-        
-        while(1){
+        Boolean flag = true, done = false;
+        System.out.println("Start");
+        while(flag){
             for(int i=0;i<numberOfPlayers;i++){
                 int diceValue = (int)(Math.random()*(6)+1);  
                 int currentPosition = playersList[i].getPlayerPosition();
@@ -53,15 +59,13 @@ public class snakeAndLadderExe {
                 }
                 playersList[i].setPlayerPosition(newPosition);
                 if(newPosition == 100){
-                    winner = playersList[i].getPlayerName();
+                    System.out.println(playersList[i].getPlayerName() + " wins the game");
+                    done = true;
                     break;
                 }
                 System.out.println( playersList[i].getPlayerName() +" rolled a " + diceValue +" and moved from "+ currentPosition+" to "+ newPosition);
             }
-
+            if(done) break;
         }
-        System.out.println(winner + " wins the game");
-        
-
     }
 }

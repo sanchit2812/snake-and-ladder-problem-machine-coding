@@ -1,3 +1,12 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import Board.java;
+import Ladder.java;
+import Snake.java;
+import Player.java;
+
+
 class Board {
     private int boardSize;
     private Snake snakesList[];
@@ -12,22 +21,27 @@ class Board {
         this.snakesAndLadderList = new HashMap<Integer, Integer>();
     }
     
-    for(int i=0;i<snakesList.size();i++){
-        int startingPoint = snakesList[i].getSnakeStartingPosition();
-        int endingPoint = snakesList[i].getSnakeEndingPosition();
-        snakesAndLadderList.put(startingPoint, endingPoint);
+    public void snakeSetupAtBoard(){
+        Snake tempSnakesList[] = this.snakesList;
+        for(int i=0;i<tempSnakesList.length;i++){
+            int startingPoint = tempSnakesList[i].getSnakeStartingPosition();
+            int endingPoint = tempSnakesList[i].getSnakeEndingPosition();
+            snakesAndLadderList.put(startingPoint, endingPoint);
+        }
     }
 
-    for(int i=0;i<ladderList.size();i++){
-        int startingPoint = ladderList[i].getLadderStartingPosition();
-        int endingPoint = ladderList[i].getLadderEndingPosition();
-        snakesAndLadderList.put(startingPoint, endingPoint);
+    public void ladderSetupAtBoard(){
+        Ladder tempLadderList[] = this.ladderList;
+        for(int i=0;i<tempLadderList.length;i++){
+            int startingPoint = tempLadderList[i].getLadderStartingPosition();
+            int endingPoint = tempLadderList[i].getLadderEndingPosition();
+            snakesAndLadderList.put(startingPoint, endingPoint);
+        }
     }
 
     public HashMap<Integer, Integer> getSnakesAndLadderList(){
         return this.snakesAndLadderList;
     }
-
 
 }
 
